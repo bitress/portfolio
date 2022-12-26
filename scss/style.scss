@@ -1,0 +1,716 @@
+// Sass Variables
+
+
+// general
+$primary: #111; // Primary
+$link: gray; // Link
+$active: white; //link active
+$text: white; // test colot
+$bglight: #222; // background light
+$nav: $bglight; //navbar
+
+// buttons
+$btn: $bglight; // btn bg
+$btn-border: white; // btn border
+$slink: #000000; // social link
+
+
+// Skills
+$dot:  #666; // skill dot color
+$dotred: #ff2600; // skill dot red color
+$dotgreen: #9aff00; // skill dot green color
+$dotyellow: #ffbf00; // skill dot yellow color
+$dotgray: #ffffff; // empty dots
+
+
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+Author        : Himas Rafeek
+Template Name : LKS - Resume, CV 1.0.1 - Responsive Bootstrap Template
+Version       : 1.0.1
+Author URI    : https://profile.himasrafeek.com
+* ----------------------------------------------------------------------------------------
+*/
+
+/* 
+* ----------------------------------------------------------------------------------------
+*
+*   THEME INFO - v1.0.1 Dark theme
+*
+* ----------------------------------------------------------------------------------------
+
+* 01. GLOBAL STYLES
+      - HTML elements custom styles
+      - Loader styles
+
+* 02. CUSTOM CLASSES STYLES
+      - My Custom helper classes
+
+
+* 03. BOOTSTRAP STYLES
+      - Bootstrap class overwrittened
+      
+
+* 04. NAVBAR STYLES
+      - Bootstrap navbar class overwrittened
+      
+      
+* 05. MAIN HERO STYLE / USER INFO / HEADER
+      - Main hero / User Info styling
+
+
+* 06. SKILL BAR STYLES
+      - Custom dotted skill bar
+      - Dots automatically generated using javascript according to percentages
+    
+
+* 07. PORTFOLIO STYLES
+      - Custom Testimonial Owl Carousel card stylings
+
+                  
+* 08. TESTIMONIALS STYLES
+      - Custom Testimonial Owl Carousel card stylings
+
+
+* 09. CONTACT STYLES
+      - Custom Contact form designs
+        + Input
+        + Select
+        + Textarea
+
+* 10. FOOTER STYLES
+      - Custom Background Color
+        
+      
+     
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ========================================================================================
+*  01.        GLOBAL STYLE
+* ========================================================================================
+*/
+
+* {
+  transition: all 0.320s;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 1px;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+html,
+body {
+  height: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: $text;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: $link;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input,
+textarea,
+select {
+  background: none;
+  font-weight: 600;
+  font-size: 18px;
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: none;
+  }
+  &::placeholder {
+    font-weight: 500;
+  }
+}
+
+a:hover {
+  color: $active;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  line-height: 32px;
+  color: $text;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 50px 0;
+  background: $primary;
+}
+
+@media (max-width: 580px) {
+  h2,
+  section .pb-5,
+  .py-5 {
+    font-size: 20px;
+    padding-bottom: 25px !important;
+  }
+  p {
+    font-size: 16px !important;
+  }
+}
+
+/* 
+*
+*********************************************************************
+*    02                Custom Helper Classes                        *
+*********************************************************************
+*
+*/
+
+.container {
+  max-width: 800px !important;
+  padding: 10px 15px;
+}
+
+.btn-white {
+  background: $text;
+  color: $primary;
+  font-weight: 400 !important;
+  &:hover {
+    background: $btn;
+    color: $text;
+    border-color: $btn-border;
+  }
+}
+
+.btn-outline-black {
+  background: transparent;
+  border-color: $text;
+  color: $text;
+  font-weight: 400 !important;
+  &:hover {
+    background: $btn;
+    color: white;
+    border-color: $btn-border;
+  }
+}
+
+/* Also used for navbar border bottom*/
+
+.lks-border {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  box-shadow: 0 0 5px 0 #000000;
+}
+
+/* 
+*
+*********************************************************************
+*   03                Bootstrap Classes Overwrite                   *
+*********************************************************************
+*
+*/
+
+.row {
+  margin: 0 !important;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.badge-dark,
+.bg-dark {
+  background: $primary !important;
+}
+
+.bg-light{
+  background: $bglight !important;
+}
+
+/*
+* ===============================================================================
+*  04 - NAVBAR STYLES
+* ===============================================================================
+*/
+
+.navbar {
+  background: $nav;
+  padding: 10px;
+}
+
+.navbar-brand {
+  border-radius: 25px;
+}
+
+.navbar-toggler {
+  font-size: 25px;
+  &:focus {
+    outline-color: #555;
+  }
+}
+
+/* Links */
+
+.nav-link {
+  padding: 10px 15px !important;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-link.active {
+  color: $active;
+}
+
+/*
+* ===============================================================================
+*  05 - HEADER STYLES
+* ===============================================================================
+*/
+
+/*
+    Main Header
+*/
+
+header {
+  padding: 100px 10px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+}
+
+.lks-main-header {
+  padding: 100px 10px;
+  min-height: 100vh;
+  /*
+        Header Main user image
+    */
+  .lks-img {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .social-icons {
+    ul {
+      padding: 15px 0 0 0;
+      margin: 0;
+      li {
+        padding: 0 5px 0 0;
+        margin: 5px 0;
+        list-style: none;
+        display: inline-block;
+        a {
+          font-size: 18px;
+          display: block;
+          width: 35px;
+          height: 35px;
+          background: $slink;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          border-radius: 50%;
+          &:hover {
+            background: lighten($primary, 15%);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 100px 0px !important;
+    * {
+      text-align: center;
+    }
+    .lks-container {
+      padding: 0 !important;
+    }
+    .lks-box {
+      width: 100%;
+      padding-top: 25px;
+      padding-left: 0 !important;
+    }
+    .lks-img {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .lks-username {
+      font-size: 28px;
+    }
+    .lks-lead {
+      font-size: 16px;
+    }
+    .social-icons {
+      ul {
+        padding: 25px 0 0 0;
+        li {
+          padding: 0 10px 0 0;
+          a {
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+/*
+* ===============================================================================
+*  06 - SKILLS BAR STYLES
+* ===============================================================================
+*/
+
+#skills {
+  .lks-skill-bar-v1 {
+    padding: 10px 5px;
+    max-width: 350px;
+  }
+  .lks-skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lks-dot-bar-v1 {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .lks-dots-v1 {
+    display: inline-block;
+    background: $dot;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      z-index: 1;
+      border: 2px solid $dot !important;
+    }
+    &:last-child {
+      &:before {
+        border: none !important;
+      }
+    }
+  }
+  .lks-dots-v1.gray-dot {
+    background: $dotgray !important;
+    &:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      z-index: 1;
+      border: 2px solid $dotgray !important;
+    }
+    &:last-child {
+      &:before {
+        border: none !important;
+      }
+    }
+  }
+
+  .lks-red {
+    background: $dotred;
+    &:before {
+      border: 2px solid $dotred !important;
+    }
+    &:last-child {
+      &:before {
+        border: none !important;
+      }
+    }
+  }
+
+  .lks-green {
+    background: $dotgreen;
+    &:before {
+      border: 2px solid $dotgreen !important;
+    }
+    &:last-child {
+      &:before {
+        border: none !important;
+      }
+    }
+  }
+
+  .lks-yellow {
+    background: $dotyellow;
+    &:before {
+      border: 2px solid $dotyellow !important;
+    }
+    &:last-child {
+      &:before {
+        border: none !important;
+      }
+    }
+  }
+
+
+}
+
+
+
+/*
+* ========================================================================================
+*   07. PORTFOLIO STYLE
+* ========================================================================================
+*/
+
+#portfolio {
+  .lks-categories {
+    padding: 15px 0;
+    padding-top: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap !important;
+    li {
+      background: #dedcdc;
+      padding: 5px 10px;
+      margin: 5px 10px 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      list-style: none;
+      cursor: pointer;
+      user-select: none;
+      &:hover,
+      &.active {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+  .lks-work-image {
+    transition: all 0.320s;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin: 0 !important;
+    overflow: hidden;
+    position: relative;
+  }
+  .filtr-container {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    @media(max-width: 580px) {
+      flex-direction: column;
+    }
+    .filtr-item {
+      max-width: 50%;
+      flex-basis: 50%;
+      width: 100%;
+      height: 350px;
+      border: 5px solid $primary;
+      &:hover {
+        .overlay {
+          opacity: 1;
+          top: 0;
+        }
+      }
+      .overlay {
+        background: rgba(black, 0.9);
+        position: absolute;
+        top: 10%;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        .title {
+          color: $text;
+        }
+        .lead {
+          font-size: 14px;
+          max-width: 90%;
+          margin: 10px auto;
+          color: $text;
+        }
+        .links {
+          display: flex;
+          a {
+            margin: 5px;
+          }
+        }
+      }
+      @media(max-width: 580px) {
+        max-width: 100% !important;
+        display: block;
+        flex-basis: 100% !important;
+      }
+    }
+  }
+}
+
+/*
+* ========================================================================================
+*   08. TESTIMONIALS STYLE
+* ========================================================================================
+*/
+
+#testimonials {
+  hr {
+    padding-bottom: 10px;
+  }
+  .item {
+    background: $primary;
+    padding: 5px;
+
+    i {
+      color: white !important;
+    }
+
+  }
+  .comment {
+    padding: 15px 25px;
+    @media(max-width: 580px) {
+      padding: 15px 0px;
+      p {
+        font-size: 12px;
+
+        
+      }
+      .left {
+        left: -5px;
+        font-size: 15px !important;
+      }
+      .right {
+        right: -5px;
+        font-size: 15px !important;
+      }
+    }
+    .left {
+      top: 10px;
+      left: 0px;
+      font-size: 25px;
+    }
+    .right {
+      right: 0px;
+      top: 10px;
+      font-size: 25px;
+    }
+  }
+  .owl-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    .owl-dot {
+      width: 15px;
+      height: 15px;
+      background: gray;
+      margin: 0 5px;
+      border-radius: 50%;
+      position: relative;
+      &.active {
+        background: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+
+
+/*
+* ========================================================================================
+* 09. CONTACT STYLE
+* ========================================================================================
+*/
+
+#contact {
+  .lks-textarea,
+  .lks-input {
+    border: 2px solid $text;
+    padding: 10px 15px;
+    color: $primary;
+    color: white;
+
+    &::placeholder{
+      color: gray;
+    }
+  }
+  .lks-textarea {
+    min-height: 150px;
+    resize: none;
+  }
+}
+
+
+/*
+* ========================================================================================
+* 10. FOOTER STYLE
+* ========================================================================================
+*/
+
+
+footer{
+  background: $primary;
+}

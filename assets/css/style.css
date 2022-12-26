@@ -1,0 +1,631 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author        : Himas Rafeek
+Template Name : LKS - Resume, CV 1.0.1 - Responsive Bootstrap Template
+Version       : 1.0.1
+Author URI    : https://profile.himasrafeek.com
+* ----------------------------------------------------------------------------------------
+*/
+/* 
+* ----------------------------------------------------------------------------------------
+*
+*   THEME INFO - v1.0.1 Dark theme
+*
+* ----------------------------------------------------------------------------------------
+
+* 01. GLOBAL STYLES
+      - HTML elements custom styles
+      - Loader styles
+
+* 02. CUSTOM CLASSES STYLES
+      - My Custom helper classes
+
+
+* 03. BOOTSTRAP STYLES
+      - Bootstrap class overwrittened
+      
+
+* 04. NAVBAR STYLES
+      - Bootstrap navbar class overwrittened
+      
+      
+* 05. MAIN HERO STYLE / USER INFO / HEADER
+      - Main hero / User Info styling
+
+
+* 06. SKILL BAR STYLES
+      - Custom dotted skill bar
+      - Dots automatically generated using javascript according to percentages
+    
+
+* 07. PORTFOLIO STYLES
+      - Custom Testimonial Owl Carousel card stylings
+
+                  
+* 08. TESTIMONIALS STYLES
+      - Custom Testimonial Owl Carousel card stylings
+
+
+* 09. CONTACT STYLES
+      - Custom Contact form designs
+        + Input
+        + Select
+        + Textarea
+
+* 10. FOOTER STYLES
+      - Custom Background Color
+        
+      
+     
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ========================================================================================
+*  01.        GLOBAL STYLE
+* ========================================================================================
+*/
+* {
+  -webkit-transition: all 0.320s;
+  -o-transition: all 0.320s;
+  transition: all 0.320s; }
+
+body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 1px;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
+
+html,
+body {
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: white; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  color: gray; }
+
+img {
+  width: 100%; }
+
+.btn:focus, .btn:hover {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+input,
+textarea,
+select {
+  background: none;
+  font-weight: 600;
+  font-size: 18px; }
+  input:focus, input:hover,
+  textarea:focus,
+  textarea:hover,
+  select:focus,
+  select:hover {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  select::-webkit-input-placeholder {
+    font-weight: 500; }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  select:-ms-input-placeholder {
+    font-weight: 500; }
+  input::-ms-input-placeholder,
+  textarea::-ms-input-placeholder,
+  select::-ms-input-placeholder {
+    font-weight: 500; }
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    font-weight: 500; }
+
+a:hover {
+  color: white;
+  text-decoration: none; }
+
+a:focus {
+  outline: none;
+  text-decoration: none; }
+
+p {
+  line-height: 32px;
+  color: white; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0; }
+
+section {
+  padding: 50px 0;
+  background: #111; }
+
+@media (max-width: 580px) {
+  h2,
+  section .pb-5,
+  .py-5 {
+    font-size: 20px;
+    padding-bottom: 25px !important; }
+  p {
+    font-size: 16px !important; } }
+
+/* 
+*
+*********************************************************************
+*    02                Custom Helper Classes                        *
+*********************************************************************
+*
+*/
+.container {
+  max-width: 800px !important;
+  padding: 10px 15px; }
+
+.btn-white {
+  background: white;
+  color: #111;
+  font-weight: 400 !important; }
+  .btn-white:hover {
+    background: #222;
+    color: white;
+    border-color: white; }
+
+.btn-outline-black {
+  background: transparent;
+  border-color: white;
+  color: white;
+  font-weight: 400 !important; }
+  .btn-outline-black:hover {
+    background: #222;
+    color: white;
+    border-color: white; }
+
+/* Also used for navbar border bottom*/
+.lks-border {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  -webkit-box-shadow: 0 0 5px 0 #000000;
+  box-shadow: 0 0 5px 0 #000000; }
+
+/* 
+*
+*********************************************************************
+*   03                Bootstrap Classes Overwrite                   *
+*********************************************************************
+*
+*/
+.row {
+  margin: 0 !important; }
+
+.btn {
+  font-size: 16px;
+  font-weight: 300; }
+
+.badge-dark,
+.bg-dark {
+  background: #111 !important; }
+
+.bg-light {
+  background: #222 !important; }
+
+/*
+* ===============================================================================
+*  04 - NAVBAR STYLES
+* ===============================================================================
+*/
+.navbar {
+  background: #222;
+  padding: 10px; }
+
+.navbar-brand {
+  border-radius: 25px; }
+
+.navbar-toggler {
+  font-size: 25px; }
+  .navbar-toggler:focus {
+    outline-color: #555; }
+
+/* Links */
+.nav-link {
+  padding: 10px 15px !important;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase; }
+
+.nav-link.active {
+  color: white; }
+
+/*
+* ===============================================================================
+*  05 - HEADER STYLES
+* ===============================================================================
+*/
+/*
+    Main Header
+*/
+header {
+  padding: 100px 10px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #111; }
+
+.lks-main-header {
+  padding: 100px 10px;
+  min-height: 100vh;
+  /*
+        Header Main user image
+    */ }
+  .lks-main-header .lks-img {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 50%; }
+  .lks-main-header .social-icons ul {
+    padding: 15px 0 0 0;
+    margin: 0; }
+    .lks-main-header .social-icons ul li {
+      padding: 0 5px 0 0;
+      margin: 5px 0;
+      list-style: none;
+      display: inline-block; }
+      .lks-main-header .social-icons ul li a {
+        font-size: 18px;
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: #000000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%; }
+        .lks-main-header .social-icons ul li a:hover {
+          background: #373737; }
+  @media (max-width: 768px) {
+    .lks-main-header {
+      padding: 100px 0px !important; }
+      .lks-main-header * {
+        text-align: center; }
+      .lks-main-header .lks-container {
+        padding: 0 !important; }
+      .lks-main-header .lks-box {
+        width: 100%;
+        padding-top: 25px;
+        padding-left: 0 !important; }
+      .lks-main-header .lks-img {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%; }
+      .lks-main-header .lks-username {
+        font-size: 28px; }
+      .lks-main-header .lks-lead {
+        font-size: 16px; }
+      .lks-main-header .social-icons ul {
+        padding: 25px 0 0 0; }
+        .lks-main-header .social-icons ul li {
+          padding: 0 10px 0 0; }
+          .lks-main-header .social-icons ul li a {
+            font-size: 14px;
+            width: 30px;
+            height: 30px; } }
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px; } }
+
+/*
+* ===============================================================================
+*  06 - SKILLS BAR STYLES
+* ===============================================================================
+*/
+#skills .lks-skill-bar-v1 {
+  padding: 10px 5px;
+  max-width: 350px; }
+
+#skills .lks-skill-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#skills .lks-dot-bar-v1 {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+#skills .lks-dots-v1 {
+  display: inline-block;
+  background: #666;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  position: relative; }
+  #skills .lks-dots-v1:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+    border: 2px solid #666 !important; }
+  #skills .lks-dots-v1:last-child:before {
+    border: none !important; }
+
+#skills .lks-dots-v1.gray-dot {
+  background: #ffffff !important; }
+  #skills .lks-dots-v1.gray-dot:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+    border: 2px solid #ffffff !important; }
+  #skills .lks-dots-v1.gray-dot:last-child:before {
+    border: none !important; }
+
+#skills .lks-red {
+  background: #ff2600; }
+  #skills .lks-red:before {
+    border: 2px solid #ff2600 !important; }
+  #skills .lks-red:last-child:before {
+    border: none !important; }
+
+#skills .lks-green {
+  background: #9aff00; }
+  #skills .lks-green:before {
+    border: 2px solid #9aff00 !important; }
+  #skills .lks-green:last-child:before {
+    border: none !important; }
+
+#skills .lks-yellow {
+  background: #ffbf00; }
+  #skills .lks-yellow:before {
+    border: 2px solid #ffbf00 !important; }
+  #skills .lks-yellow:last-child:before {
+    border: none !important; }
+
+/*
+* ========================================================================================
+*   07. PORTFOLIO STYLE
+* ========================================================================================
+*/
+#portfolio .lks-categories {
+  padding: 15px 0;
+  padding-top: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important; }
+  #portfolio .lks-categories li {
+    background: #dedcdc;
+    padding: 5px 10px;
+    margin: 5px 10px 0 0;
+    font-size: 12px;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    #portfolio .lks-categories li:hover, #portfolio .lks-categories li.active {
+      background: #111;
+      color: white; }
+
+#portfolio .lks-work-image {
+  -webkit-transition: all 0.320s;
+  -o-transition: all 0.320s;
+  transition: all 0.320s;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0 !important;
+  overflow: hidden;
+  position: relative; }
+
+#portfolio .filtr-container {
+  width: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media (max-width: 580px) {
+    #portfolio .filtr-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  #portfolio .filtr-container .filtr-item {
+    max-width: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    width: 100%;
+    height: 350px;
+    border: 5px solid #111; }
+    #portfolio .filtr-container .filtr-item:hover .overlay {
+      opacity: 1;
+      top: 0; }
+    #portfolio .filtr-container .filtr-item .overlay {
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 10%;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #portfolio .filtr-container .filtr-item .overlay .title {
+        color: white; }
+      #portfolio .filtr-container .filtr-item .overlay .lead {
+        font-size: 14px;
+        max-width: 90%;
+        margin: 10px auto;
+        color: white; }
+      #portfolio .filtr-container .filtr-item .overlay .links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #portfolio .filtr-container .filtr-item .overlay .links a {
+          margin: 5px; }
+    @media (max-width: 580px) {
+      #portfolio .filtr-container .filtr-item {
+        max-width: 100% !important;
+        display: block;
+        -ms-flex-preferred-size: 100% !important;
+        flex-basis: 100% !important; } }
+
+/*
+* ========================================================================================
+*   08. TESTIMONIALS STYLE
+* ========================================================================================
+*/
+#testimonials hr {
+  padding-bottom: 10px; }
+
+#testimonials .item {
+  background: #111;
+  padding: 5px; }
+  #testimonials .item i {
+    color: white !important; }
+
+#testimonials .comment {
+  padding: 15px 25px; }
+  @media (max-width: 580px) {
+    #testimonials .comment {
+      padding: 15px 0px; }
+      #testimonials .comment p {
+        font-size: 12px; }
+      #testimonials .comment .left {
+        left: -5px;
+        font-size: 15px !important; }
+      #testimonials .comment .right {
+        right: -5px;
+        font-size: 15px !important; } }
+  #testimonials .comment .left {
+    top: 10px;
+    left: 0px;
+    font-size: 25px; }
+  #testimonials .comment .right {
+    right: 0px;
+    top: 10px;
+    font-size: 25px; }
+
+#testimonials .owl-dots {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #testimonials .owl-dots .owl-dot {
+    width: 15px;
+    height: 15px;
+    background: gray;
+    margin: 0 5px;
+    border-radius: 50%;
+    position: relative; }
+    #testimonials .owl-dots .owl-dot.active {
+      background: white; }
+
+/*
+* ========================================================================================
+* 09. CONTACT STYLE
+* ========================================================================================
+*/
+#contact .lks-textarea,
+#contact .lks-input {
+  border: 2px solid white;
+  padding: 10px 15px;
+  color: #111;
+  color: white; }
+  #contact .lks-textarea::-webkit-input-placeholder,
+  #contact .lks-input::-webkit-input-placeholder {
+    color: gray; }
+  #contact .lks-textarea:-ms-input-placeholder,
+  #contact .lks-input:-ms-input-placeholder {
+    color: gray; }
+  #contact .lks-textarea::-ms-input-placeholder,
+  #contact .lks-input::-ms-input-placeholder {
+    color: gray; }
+  #contact .lks-textarea::placeholder,
+  #contact .lks-input::placeholder {
+    color: gray; }
+
+#contact .lks-textarea {
+  min-height: 150px;
+  resize: none; }
+
+/*
+* ========================================================================================
+* 10. FOOTER STYLE
+* ========================================================================================
+*/
+footer {
+  background: #111; }
